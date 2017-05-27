@@ -1,0 +1,12 @@
+version: "2"
+services:
+  api:
+    build: .
+    volumes:
+      - ./src:/app/src
+    environment:
+      - HTTP_PORT=7070
+    ports:
+      - "7070:7070"
+    command: npm start
+
